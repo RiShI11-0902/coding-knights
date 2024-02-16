@@ -26,13 +26,7 @@ const Login = () => {
             </a>
             <div className="md:w-[70rem] bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
               <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                <form onSubmit={ handleSubmit((data)=>{
-                  dispatch(createUserAsync({
-                    email: data.email,
-                    name : data.name,
-                    password: data.password
-                  })) 
-                })} className=" space-y-3 md:space-y-3" >
+                <form className=" space-y-3 md:space-y-3" >
                   <div>
                     <label htmlfor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
                     <input {...register("email", {
